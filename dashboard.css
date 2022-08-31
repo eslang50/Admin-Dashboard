@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  
+}
+
+.dashboard {
+  grid-row: 1 / 4;
+}
+
+.header, .nav {
+  grid-column: 2 / 3;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 50px 2fr 1fr 2fr
+}
+
+.projects {
+  grid-area: 2 / 1 / 5 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.trending {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+li {
+  list-style: none;
+}
+
+h4,h5,h6 {
+  font-size: 1em;
+}
+
+.project-name {
+  font-weight: bold;
+}
+
+h4 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+h5 {
+  grid-column: 2 / 3;
+}
+
+h6 {
+  grid-area: 3 / 2 / 4 / 3;
+}
